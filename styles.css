@@ -3,3 +3,15 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
 }
+
+h2 {
+  font-size: 18px;
+}
+
+.titulo-seccion {
+  font-size: 22px;
+}
+
+#servicios h2 {
+  font-size: 26px;
+}
