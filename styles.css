@@ -29,3 +29,7 @@ h2 {
   padding: 20px;
   border: 10px solid black;
 }
+
+header {
+  margin-bottom: 24px;
+}
