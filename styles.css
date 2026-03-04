@@ -1,4 +1,8 @@
 /* Estilos base (Nivel 2 - Día 1) */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
@@ -18,4 +22,10 @@ h2 {
 
 #servicios h2 {
   font-size: 26px;
+}
+
+.caja-prueba {
+  width: 300px;
+  padding: 20px;
+  border: 10px solid black;
 }
