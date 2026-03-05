@@ -12,14 +12,25 @@ body {
 }
 
 
+header,
+main,
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+
 header {
+  background-color: #fafafa;
   margin-bottom: 24px;
-  border-bottom: 1px solid #d1d5db;
+  border-bottom: 1px solid #f8f9fa;
 }
 
 footer {
   font-size: 14px;
   color: #4b5563;
+  margin-top: 15px;
 }
 
 h1 {
@@ -72,14 +83,6 @@ nav a:hover {
 nav a:focus-visible {
   outline: 3px solid #111827;
   outline-offset: 3px;
-}
-
-header,
-main,
-footer {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 16px;
 }
 
 .btn-principal{
