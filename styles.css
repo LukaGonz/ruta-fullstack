@@ -60,3 +60,19 @@ nav a:focus-visible {
   outline: 3px solid #111827;
   outline-offset: 3px;
 }
+
+body {
+  margin: 0;
+}
+
+header,
+main,
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+header {
+  border-bottom: 1px solid #d1d5db;
+}
