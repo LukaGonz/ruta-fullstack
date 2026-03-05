@@ -14,9 +14,7 @@ body {
 
 main,
 footer {
-  max-width: 900px;
   margin: 0 auto;
-  padding: 16px;
 }
 
 
@@ -52,15 +50,14 @@ section {
   margin-top: 24px;
 }
 
+#destacado {
+  background-color: #f3f4f6;
+  border-top: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
+}
 
 .titulo-seccion {
   font-size: 22px;
-}
-
-.caja-prueba {
-  width: 300px;
-  padding: 20px;
-  border: 10px solid black;
 }
 
 nav ul {
@@ -104,4 +101,20 @@ nav a:focus-visible {
 
 .btn-principal:active {
   transform: translateY(1px); /* micro “hundimiento” */
+}
+
+.btn-destacado {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 2px solid #111827;
+  text-decoration: none;
+}
+
+.btn-destacado:hover {
+  background-color: #e5e7eb;
+}
+
+.btn-destacado:focus-visible {
+  outline: 3px solid #111827;
+  outline-offset: 3px;
 }
