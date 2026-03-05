@@ -12,7 +12,6 @@ body {
 }
 
 
-header,
 main,
 footer {
   max-width: 900px;
@@ -22,15 +21,21 @@ footer {
 
 
 header {
-  background-color: #fafafa;
+  background-color: #f3f4f6;
+  border-bottom: 2px solid #9ca3af;
   margin-bottom: 24px;
-  border-bottom: 1px solid #d1d5db;
 }
 
 footer {
   font-size: 14px;
   color: #4b5563;
   margin-top: 15px;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
 }
 
 h1 {
