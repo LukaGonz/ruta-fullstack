@@ -51,3 +51,12 @@ nav a {
   border: 2px solid black;   /* borde visible */
   text-decoration: none;     /* saca el subrayado */
 }
+
+nav a:hover {
+  background: #e5e7eb;
+}
+
+nav a:focus-visible {
+  outline: 3px solid #111827;
+  outline-offset: 3px;
+}
