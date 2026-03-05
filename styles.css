@@ -85,3 +85,13 @@ footer {
   margin: 0 auto;
   padding: 16px;
 }
+
+.boton-contacto{
+  background-color: #7d8086;
+  color: #e7dfdf;
+  padding: 15px 19px ;
+}
+
+.boton-contacto:hover {
+  color: #000;
+}
