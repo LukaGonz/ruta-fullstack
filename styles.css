@@ -131,3 +131,11 @@ nav a:focus-visible {
   outline: 3px solid #111827;
   outline-offset: 3px;
 }
+
+.badge {
+  display: inline-block;
+  background-color: #e5e7eb;
+  border: 1px solid #9ca3af;
+  padding: 6px 10px;
+  width: 180px;
+}
