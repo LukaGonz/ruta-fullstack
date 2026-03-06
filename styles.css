@@ -1,23 +1,28 @@
-/* Estilos base (Nivel 2 - Día 1) */
+/* =========================
+  1) Reset / Base global
+   ========================= */
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-  font-size: 18px;
-  color: #111827;
   margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #111827;
 }
 
-
-main,
-footer {
+/* =========================
+  2) Layout (contenedores)
+  ========================= */
+.wrap {
+  max-width: 900px;
   margin: 0 auto;
+  padding: 16px;
 }
 
-
+/* Secciones “full-width” (fondo a todo el ancho) */
 header {
   background-color: #f3f4f6;
   border-bottom: 2px solid #9ca3af;
@@ -25,17 +30,14 @@ header {
 }
 
 footer {
+  margin-top: 15px;
   font-size: 14px;
   color: #4b5563;
-  margin-top: 15px;
 }
 
-.wrap {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 16px;
-}
-
+/* =========================
+  3) Tipografía / Jerarquía
+  ========================= */
 h1 {
   font-size: 32px;
   margin: 0 0 8px 0;
@@ -46,36 +48,43 @@ h2 {
   margin: 0 0 10px 0;
 }
 
+.titulo-seccion {
+  font-size: 22px;
+}
+
+/* Separación vertical entre secciones */
 section {
   margin-top: 24px;
 }
 
+/* =========================
+  4) Secciones especiales
+  ========================= */
 #destacado {
   background-color: #f3f4f6;
   border-top: 1px solid #d1d5db;
   border-bottom: 1px solid #d1d5db;
 }
 
-.titulo-seccion {
-  font-size: 22px;
-}
-
+/* =========================
+  5) Navegación (menú)
+  ========================= */
 nav ul {
-  list-style: none;   /* saca los puntitos */
-  padding: 0;         /* saca padding por defecto */
-  margin: 0;          /* saca margen por defecto */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav li {
-  display: inline-block; /* pone los items en fila */
-  margin-right: 12px;    /* separación entre botones */
+  display: inline-block;
+  margin-right: 12px;
 }
 
 nav a {
-  display: inline-block;     /* para que padding funcione bien */
-  padding: 10px 14px;        /* alto y ancho del “botón” */
-  border: 2px solid black;   /* borde visible */
-  text-decoration: none;     /* saca el subrayado */
+  display: inline-block;
+  padding: 10px 14px;
+  border: 2px solid black;
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -87,22 +96,26 @@ nav a:focus-visible {
   outline-offset: 3px;
 }
 
-.btn-principal{
+/* =========================
+  6) Botones (CTA)
+  ========================= */
+.btn-principal {
   background-color: #7d8086;
   color: #e7dfdf;
-  padding: 15px 19px ;
-  border-color: #111827;
+  padding: 15px 19px;
+  border-color: #111827; /* aprovecha el border que ya tiene nav a */
 }
 
 .btn-principal:hover {
-  background-color: #4b5563; /* más oscuro = efecto “presionado” */
+  background-color: #4b5563; /* efecto “presionado” */
   color: #ffffff;
 }
 
 .btn-principal:active {
-  transform: translateY(1px); /* micro “hundimiento” */
+  transform: translateY(1px);
 }
 
+/* Botón de la sección Destacado */
 .btn-destacado {
   display: inline-block;
   padding: 10px 14px;
