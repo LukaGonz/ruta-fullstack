@@ -139,3 +139,14 @@ nav a:focus-visible {
   padding: 6px 10px;
   width: 180px;
 }
+
+.mensaje-error {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border: 2px dashed #9ca3af;
+  background-color: #ffffff;
+}
+
+.mensaje-error.oculto {
+  display: none;
+}
