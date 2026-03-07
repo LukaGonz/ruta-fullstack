@@ -168,15 +168,22 @@ nav a:focus-visible {
   padding: 18px 16px; /* más alta */
 }
 
-#destacado {
-  position: relative;
+.btn-fixed {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  padding: 10px 12px;
+  border: 2px solid #111827;
+  background: #ffffff;
+  text-decoration: none;
+  z-index: 1000;
 }
 
-.tag-abs {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  border: 2px solid #111827;
-  padding: 6px 10px;
-  background: #ffffff;
+.btn-fixed:hover {
+  background: #e5e7eb;
+}
+
+.btn-fixed:focus-visible {
+  outline: 3px solid #111827;
+  outline-offset: 3px;
 }
