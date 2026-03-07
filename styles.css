@@ -167,3 +167,16 @@ nav a:focus-visible {
 .pill-grande {
   padding: 18px 16px; /* más alta */
 }
+
+#destacado {
+  position: relative;
+}
+
+.tag-abs {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 2px solid #111827;
+  padding: 6px 10px;
+  background: #ffffff;
+}
