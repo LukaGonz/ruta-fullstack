@@ -69,6 +69,7 @@ section { margin-top: 24px; }
   4) Secciones especiales
    ========================= */
 #destacado {
+  position: relative;
   background-color: #f3f4f6;
   border-top: 1px solid #d1d5db;
   border-bottom: 1px solid #d1d5db;
@@ -199,3 +200,14 @@ header .badge {
 
 .btn-fixed--discreto { opacity: 0.5; transform: scale(0.9); }
 .btn-fixed--visible  { opacity: 1;   transform: scale(1); }
+
+.tag-z{
+  position: absolute;
+  top: -14px;
+  right: 16px;
+
+  padding: 6px 10px;
+  border: 2px solid #111827;
+  background: #ffffff;
+  z-index: 2000; /* a propósito alto para probar */
+}
