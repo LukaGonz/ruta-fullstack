@@ -1,9 +1,7 @@
 /* =========================
   1) Reset / Base global
    ========================= */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -13,16 +11,22 @@ body {
   color: #111827;
 }
 
+/* Foco accesible global para links (evita duplicación) */
+a:focus-visible {
+  outline: 3px solid #111827;
+  outline-offset: 3px;
+}
+
 /* =========================
   2) Layout (contenedores)
-  ========================= */
+   ========================= */
 .wrap {
   max-width: 900px;
   margin: 0 auto;
   padding: 16px;
 }
 
-/* Secciones “full-width” (fondo a todo el ancho) */
+/* Header full-width + sticky */
 header {
   background-color: #f3f4f6;
   border-bottom: 2px solid #9ca3af;
@@ -40,7 +44,7 @@ footer {
 
 /* =========================
   3) Tipografía / Jerarquía
-  ========================= */
+   ========================= */
 h1 {
   font-size: 32px;
   margin: 0 0 8px 0;
@@ -57,18 +61,13 @@ h2 {
   margin: 0 0 10px 0;
 }
 
-.titulo-seccion {
-  font-size: 22px;
-}
+.titulo-seccion { font-size: 22px; }
 
-/* Separación vertical entre secciones */
-section {
-  margin-top: 24px;
-}
+section { margin-top: 24px; }
 
 /* =========================
   4) Secciones especiales
-  ========================= */
+   ========================= */
 #destacado {
   background-color: #f3f4f6;
   border-top: 1px solid #d1d5db;
@@ -76,12 +75,11 @@ section {
   text-align: center;
 }
 
-#servicios {
-  position: relative;
-}
+#servicios { position: relative; }
+
 /* =========================
   5) Navegación (menú)
-  ========================= */
+   ========================= */
 nav ul {
   list-style: none;
   padding: 0;
@@ -100,35 +98,25 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
-  background: #e5e7eb;
-}
-
-nav a:focus-visible {
-  outline: 3px solid #111827;
-  outline-offset: 3px;
-}
+nav a:hover { background: #e5e7eb; }
 
 /* =========================
-  6) Botones (CTA)
-  ========================= */
+  6) Botones / CTAs
+   ========================= */
 .btn-principal {
   background-color: #7d8086;
   color: #e7dfdf;
   padding: 15px 19px;
-  border-color: #111827; /* aprovecha el border que ya tiene nav a */
+  border-color: #111827;
 }
 
 .btn-principal:hover {
-  background-color: #4b5563; /* efecto “presionado” */
+  background-color: #4b5563;
   color: #ffffff;
 }
 
-.btn-principal:active {
-  transform: translateY(1px);
-}
+.btn-principal:active { transform: translateY(1px); }
 
-/* Botón de la sección Destacado */
 .btn-destacado {
   display: inline-block;
   padding: 10px 14px;
@@ -136,37 +124,39 @@ nav a:focus-visible {
   text-decoration: none;
 }
 
-.btn-destacado:hover {
-  background-color: #e5e7eb;
-}
+.btn-destacado:hover { background-color: #e5e7eb; }
 
-.btn-destacado:focus-visible {
-  outline: 3px solid #111827;
-  outline-offset: 3px;
-}
-
-.badge {
+/* =========================
+  7) Badges
+   ========================= */
+/* Base (sirve tanto para header como para stickers) */
+.badge,
+.badge-new {
   display: inline-block;
-  text-align: center;
   background-color: #e5e7eb;
   border: 1px solid #9ca3af;
   padding: 6px 10px;
-  width: 180px;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
 }
 
-#servicios .badge-new{
+/* Badge al lado del título (solo layout extra) */
+header .badge {
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+/* Sticker “NUEVO” dentro de Servicios */
+#servicios .badge-new {
   position: absolute;
   top: 16px;
   right: 16px;
-  display: inline-block;
-  text-align: center;
-  background-color: #e5e7eb;
-  border: 1px solid #9ca3af;
-  padding: 6px 10px;
-  width: 120px;
-  font-size: 1px;
 }
 
+/* =========================
+  8) Mensaje de error (demo)
+   ========================= */
 .mensaje-error {
   margin-top: 8px;
   padding: 8px 10px;
@@ -174,13 +164,12 @@ nav a:focus-visible {
   background-color: #ffffff;
 }
 
-.mensaje-error.oculto {
-  display: none;
-}
+.mensaje-error.oculto { display: none; }
 
-.demo-inline {
-  margin-top: 12px;
-}
+/* =========================
+  9) Demos de inline-block
+   ========================= */
+.demo-inline { margin-top: 12px; }
 
 .pill {
   display: inline-block;
@@ -190,10 +179,11 @@ nav a:focus-visible {
   margin-right: 8px;
 }
 
-.pill-grande {
-  padding: 18px 16px; /* más alta */
-}
+.pill-grande { padding: 18px 16px; }
 
+/* =========================
+  10) Botón fijo “Arriba”
+   ========================= */
 .btn-fixed {
   position: fixed;
   right: 16px;
@@ -205,32 +195,7 @@ nav a:focus-visible {
   z-index: 1000;
 }
 
-.btn-fixed:hover {
-  background: #e5e7eb;
-}
+.btn-fixed:hover { background: #e5e7eb; }
 
-.btn-fixed:focus-visible {
-  outline: 3px solid #111827;
-  outline-offset: 3px;
-}
-
-.btn-fixed--discreto {
-  opacity: 0.5;
-  transform: scale(0.9);
-}
-
-.btn-fixed--visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
-header .badge {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 12px;
-
-  background-color: #e5e7eb;
-  border: 1px solid #9ca3af;
-  padding: 6px 10px;
-  font-size: 12px;
-}
+.btn-fixed--discreto { opacity: 0.5; transform: scale(0.9); }
+.btn-fixed--visible  { opacity: 1;   transform: scale(1); }
