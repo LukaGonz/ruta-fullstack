@@ -27,6 +27,9 @@ header {
   background-color: #f3f4f6;
   border-bottom: 2px solid #9ca3af;
   margin-bottom: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 footer {
@@ -41,6 +44,12 @@ footer {
 h1 {
   font-size: 32px;
   margin: 0 0 8px 0;
+}
+
+header h1 {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
 }
 
 h2 {
@@ -67,6 +76,9 @@ section {
   text-align: center;
 }
 
+#servicios {
+  position: relative;
+}
 /* =========================
   5) Navegación (menú)
   ========================= */
@@ -135,16 +147,30 @@ nav a:focus-visible {
 
 .badge {
   display: inline-block;
+  text-align: center;
   background-color: #e5e7eb;
   border: 1px solid #9ca3af;
   padding: 6px 10px;
   width: 180px;
 }
 
+#servicios .badge-new{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-block;
+  text-align: center;
+  background-color: #e5e7eb;
+  border: 1px solid #9ca3af;
+  padding: 6px 10px;
+  width: 120px;
+  font-size: 1px;
+}
+
 .mensaje-error {
   margin-top: 8px;
   padding: 8px 10px;
-  border: 2px dashed #9ca3af;
+  border: 2px solid #9ca3af;
   background-color: #ffffff;
 }
 
@@ -188,8 +214,23 @@ nav a:focus-visible {
   outline-offset: 3px;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.btn-fixed--discreto {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.btn-fixed--visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+header .badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 12px;
+
+  background-color: #e5e7eb;
+  border: 1px solid #9ca3af;
+  padding: 6px 10px;
+  font-size: 12px;
 }
