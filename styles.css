@@ -151,3 +151,19 @@ nav a:focus-visible {
 .mensaje-error.oculto {
   display: none;
 }
+
+.demo-inline {
+  margin-top: 12px;
+}
+
+.pill {
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid #111827;
+  padding: 8px 12px;
+  margin-right: 8px;
+}
+
+.pill-grande {
+  padding: 18px 16px; /* más alta */
+}
