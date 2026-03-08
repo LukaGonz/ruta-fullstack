@@ -321,3 +321,12 @@ header .badge {
 .btn-fixed:hover {
   transform: scale(1.05);
 }
+
+header .badge {
+  transition: transform 120ms ease;
+  transform-origin: left center;
+}
+
+header .badge:hover {
+  transform: scale(1.1);
+}
