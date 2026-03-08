@@ -306,3 +306,18 @@ header .badge {
   outline: 3px solid #111827;
   outline-offset: 3px;
 }
+
+.btn-principal,
+.btn-destacado,
+.btn-fixed {
+  transition: transform 120ms ease, background-color 120ms ease;
+}
+
+.btn-principal:hover,
+.btn-destacado:hover {
+  transform: translateY(-2px);
+}
+
+.btn-fixed:hover {
+  transform: scale(1.05);
+}
