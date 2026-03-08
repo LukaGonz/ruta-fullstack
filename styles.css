@@ -3,6 +3,10 @@
    ========================= */
 * { box-sizing: border-box; }
 
+html {
+  scroll-padding-top: 140px;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -217,4 +221,38 @@ header .badge {
   border: 2px solid #111827;
   background: #ffffff;
   z-index: 2000; /* a propósito alto para probar */
+}
+
+/* Evita que el header sticky tape los anclajes (#servicios, etc.) */
+#destacado,
+#servicios,
+#contacto,
+#sobre-mi,
+#contenido {
+  scroll-margin-top: 140px; /* si tu header es más alto, subí este número */
+}
+
+.capas {
+  position: relative;   /* referencia para las capas */
+  height: 70px;         /* para que se vea el área */
+  margin-top: 12px;
+}
+
+.capa {
+  position: absolute;   /* se superponen */
+  top: 10px;
+  left: 10px;
+  padding: 10px 12px;
+  border: 2px solid #111827;
+  background: #ffffff;
+}
+
+.capa-a {
+  z-index: 1;
+  transform: translate(0px, 0px);
+}
+
+.capa-b {
+  z-index: 2; /* debería quedar arriba */
+  transform: translate(20px, 20px); /* la corre un poco para ver la superposición */
 }
