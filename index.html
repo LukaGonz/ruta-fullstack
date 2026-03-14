@@ -1,81 +1,127 @@
 <!DOCTYPE html>
+<!-- Le dice al navegador que este documento usa HTML5 -->
+
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css" />
-  <title>Ruta Full-Stack</title>
-</head>
+  <!-- Elemento raíz del documento. lang="es" indica que el contenido está en español -->
 
-<body>
-  <header>
-    <div class="wrap">
-      <h1>Luka Mauricio Gonzalez</h1><span class="badge badge--tooltip" tabindex="0" aria-describedby="tip-formacion">
-        EN FORMACIÓN
-        <span class="tooltip" id="tip-formacion" role="tooltip">
-          Estoy aprendiendo Full-Stack: HTML, CSS, Git y bases de JS.
+  <head>
+    <!-- Información interna del documento, no visible como contenido principal -->
+
+    <meta charset="UTF-8" />
+    <!-- Permite usar tildes, ñ y caracteres especiales sin problemas -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Hace que la página se adapte correctamente a pantallas chicas como celulares -->
+
+    <title>Ruta FullStack</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Conecta este HTML con el archivo de estilos CSS -->
+  </head>
+
+  <body>
+    <!-- Todo lo visible de la página va dentro de body -->
+
+    <header class="site-header">
+      <!-- Encabezado principal del sitio -->
+      <!-- Le pusimos una clase para poder darle estilos desde CSS -->
+
+      <h1 class="logo">Luka Gonzalez</h1>
+      <!-- Título principal del sitio -->
+      <!-- h1 es el título más importante de la página -->
+
+        <span class="badge badge--tooltip" tabindex="0" aria-describedby="tip-formacion">
+          EN FORMACIÓN
+          <span class="tooltip" id="tip-formacion" role="tooltip">
+            Estoy aprendiendo Full-Stack: HTML, CSS, Git y bases de JS.
+          </span>
         </span>
-      </span>
-      <p>Desarrollo web full-stack</p>
 
-      <nav aria-label="Navegación principal">
-        <ul>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#contacto" class="btn-principal">Contacto</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-        </ul>
+      <nav class="main-nav">
+        <!-- Bloque de navegación principal -->
+        <!-- nav se usa para agrupar enlaces importantes del sitio -->
+
+        <a href="#servicios">Servicios</a>
+        <!-- Enlace interno que lleva a la sección con id="servicios" -->
+
+        <a href="#sobre-mi">Sobre mí</a>
+        <!-- Enlace interno a una sección futura con id="sobre-mi" -->
+
+        <a href="#contacto">Contacto</a>
+        <!-- Enlace interno que lleva al footer o sección con id="contacto" -->
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main id="contenido">
-    <section id="destacado">
-      <div class="wrap">
-        <span class="tag-z">Z-INDEX</span>
-        <div class="capas">
-          <span class="capa capa-a">CAPA A</span>
-          <span class="capa capa-b">CAPA B</span>
-        </div>
-        <h2 class="titulo-seccion">Destacado</h2>
-        <p>Una sección de prueba para practicar Box Model + contenido centrado.</p>
-        <a class="btn-destacado" href="#servicios">Ver más</a>
-        <div class="demo-inline">
-          <span class="pill pill-chica">Chica</span>
-          <span class="pill pill-grande">Grande</span>
-        </div>
-      </div>
-    </section>
+    <main>
+      <!-- main contiene el contenido principal de la página -->
 
-    <div class="wrap">
-      <section id="sobre-mi">
+      <section class="hero">
+        <!-- Primera sección destacada de la landing -->
+        <!-- Suele usarse para presentar el sitio o propuesta principal -->
+
+        <h2>Desarrollo web moderno y funcional</h2>
+        <!-- Título de esta sección -->
+
+        <p>
+          Diseño y desarrollo de sitios web claros, responsivos y profesionales.
+        </p>
+        <!-- Texto descriptivo corto -->
+      </section>
+
+      <section class="sobre-mi" id="sobre-mi">
+        <!--Seccion sobre mi-->
+
         <h2 class="titulo-seccion">Sobre mí</h2>
+          <!-- Título de esta sección -->
+
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quos repudiandae odit, vero ipsum dolor sunt earum atque, porro doloribus eum recusandae inventore ipsa illo quo! Impedit molestias officiis voluptatum!</p>
+        <!-- Texto descriptivo corto -->
+
       </section>
 
-      <section id="servicios">
-        <span class="badge-new">NUEVO</span>
-        <span class="badge-offer">OFERTA</span>
-        <h2 class="titulo-seccion">Servicios</h2>
-        <ul>
-          <li>Landing pages</li>
-          <li>Sitios Institucionales</li>
-          <li>Aplicaciones web</li>
-        </ul>
+      <section class="servicios" id="servicios">
+        <!-- Sección de servicios -->
+        <!-- Tiene clase para estilos y id para que el link del nav funcione -->
+
+        <h2>Servicios</h2>
+        
+        <div class="servicio-lista">
+          <article class="card">
+            <!-- Cada servicio está dentro de un article -->
+            <!-- article representa una unidad de contenido independiente -->
+
+            <h3>Landing Pages</h3>
+            <!-- Título de la card -->
+
+            <p>Sitios rápidos, claros y enfocados en conversión.</p>
+            <!-- Descripción de la card -->
+          </article>
+
+          <article class="card">
+            <!-- Segunda card -->
+
+            <h3>Diseño Responsive</h3>
+            <p>Interfaces adaptadas a celular, tablet y desktop.</p>
+          </article>
+
+          <article class="card">
+            <!-- Tercera card -->
+
+            <h3>Maquetado Web</h3>
+            <p>Estructura semántica con HTML y estilos organizados con CSS.</p>
+          </article>
+        </div>
       </section>
+    </main>
 
-      <section id="contacto">
-        <h2 class="titulo-seccion">Contacto</h2>
-        <p>Email: <a href="mailto:lukagonzalez3002@gmail.com">lukagonzalez3002@gmail.com</a></p>
-        <p class="mensaje-error oculto">⚠️ Error: este es un mensaje de prueba.</p>
-      </section>
-    </div>
-  </main>
+    <footer class="site-footer" id="contacto">
+      <!-- Pie de página -->
+      <!-- También tiene id para que el enlace "Contacto" del nav apunte acá -->
 
-  <footer>
-    <p>© 2026</p>
-  </footer>
-  <a class="btn-fixed btn-fixed--discreto" href="#contenido">↑ Arriba</a>
+      <p>Contacto: lukagonzalex3002@gmail.com</p>
+      <!-- Información de contacto -->
+    </footer>
 
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptas omnis saepe laboriosam incidunt, quidem excepturi, possimus sapiente fuga perspiciatis nesciunt vel dolorum et dolores. Corporis, consectetur harum. Architecto, voluptate! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi magni quas voluptas commodi optio ea est quo ad soluta eius ab repellat quasi, provident sit sunt sequi corporis reprehenderit distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem doloribus culpa ad rerum consequuntur reprehenderit similique aspernatur dolor impedit? Sit ad id doloremque esse! Dolores quia porro pariatur necessitatibus ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dignissimos aut iusto? Excepturi quis quisquam quidem adipisci iste nihil assumenda expedita, aspernatur minus dolore totam atque aut culpa neque! At! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, totam, in neque corrupti vero repellendus rerum facere iusto vitae nemo sint reiciendis deleniti fuga minus esse, hic ea iste aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, autem porro similique provident itaque hic nostrum aliquam nobis sit, a minus alias excepturi recusandae maxime veritatis unde consequatur! Omnis, tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repellat odio sequi doloremque quibusdam totam? Quos debitis nobis quas! Cum eius perferendis quibusdam aperiam nostrum quisquam perspiciatis eveniet doloribus officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis unde, accusantium ut est corporis natus amet nisi rem cupiditate aperiam eaque, laudantium perferendis illum facere ipsum ab dolorum veniam veritatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae modi ea aperiam commodi libero odit recusandae, ipsa architecto earum natus, consequatur, eligendi sequi impedit. Laboriosam dolorum quibusdam modi voluptatibus voluptatum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fugit tenetur dolor eum error sequi saepe, tempore suscipit eaque dolorum labore adipisci nesciunt odit. Mollitia ducimus fugiat error neque suscipit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, expedita vel consectetur, facilis quo unde maiores reiciendis placeat dolor nisi id recusandae facere ab corporis distinctio in sapiente, porro consequatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, ea sunt facere accusantium quos aliquam omnis consequuntur harum reprehenderit optio asperiores. Reprehenderit corrupti eius enim mollitia fuga saepe optio id! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur adipisci saepe impedit doloribus iusto aperiam natus exercitationem sint est soluta nesciunt laborum cum dolorem illum, repellendus laudantium neque vitae doloremque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis maxime ullam repudiandae optio, quis porro corrupti doloremque sequi accusantium earum modi veniam facilis pariatur fugit cumque a harum ad! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis delectus molestias placeat, eius fugiat repellat alias, quidem maiores perspiciatis explicabo quaerat laborum dolor totam dolores quia ab culpa reiciendis cum!</p>
-</body>
+  </body>
 </html>

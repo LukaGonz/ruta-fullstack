@@ -1,300 +1,214 @@
-/* =========================
-  1) Reset / Base global
-   ========================= */
-* { box-sizing: border-box; }
+/* Selecciona todos los elementos de la página */
+* {
+  box-sizing: border-box;
+  /* Hace que width y height incluyan padding y border */
+  /* Esto evita problemas de tamaño inesperado */
 
-html {
-  scroll-padding-top: 140px;
+  margin: 0;
+  /* Elimina márgenes por defecto del navegador */
+
+  padding: 0;
+  /* Elimina paddings por defecto del navegador */
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  font-size: 18px;
+  /* Define la tipografía general del sitio */
+
   line-height: 1.5;
-  color: #111827;
+  /* Mejora la separación vertical entre líneas de texto */
+
+  color: #222;
+  /* Color principal del texto */
+
+  background-color: #f5f5f5;
+  /* Color de fondo general de la página */
 }
 
-/* Foco accesible global para links (evita duplicación) */
-a:focus-visible {
-  outline: 3px solid #111827;
-  outline-offset: 3px;
+a {
+  text-decoration: none;
+  /* Quita el subrayado por defecto de los enlaces */
+
+  color: inherit;
+  /* Hace que el enlace use el color de su contenedor en vez del azul por defecto */
 }
 
-/* =========================
-  2) Layout (contenedores)
-   ========================= */
-.wrap {
-  max-width: 900px;
+img {
+  max-width: 100%;
+  /* Evita que una imagen se salga del ancho de su contenedor */
+
+  display: block;
+  /* Quita espacios raros que las imágenes inline suelen generar */
+}
+
+.site-header,
+.hero,
+.servicios,
+.site-footer,
+.sobre-mi {
+  width: min(1100px, 90%);
+  /* El ancho será como máximo 1100px */
+  /* Pero si la pantalla es chica, usará el 90% del ancho disponible */
+
   margin: 0 auto;
-  padding: 16px;
+  /* Centra horizontalmente estos bloques */
+
+    padding: 24px 0;
+  /* Agrega espacio vertical arriba y abajo de cada bloque */
 }
 
-/* Header full-width + sticky */
-header {
-  background-color: #f3f4f6;
+
+
+.site-header {
+  display: flex;
+  /* Convierte al header en un contenedor flex */
+
+  justify-content: space-between;
+  /* Distribuye los hijos en el eje principal */
+  /* En este caso deja el logo a un lado y el nav al otro */
+
+  align-items: center;
+  /* Centra verticalmente los hijos del header */
+
   border-bottom: 2px solid #9ca3af;
   margin-bottom: 24px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: #bebebe;
+  padding: 2rem 1rem;
 }
 
-footer {
-  margin-top: 15px;
-  font-size: 14px;
-  color: #4b5563;
+/* En .site-header, los hijos directos son:
+  - .logo
+  - .main-nav
+  Esos dos son los ítems flex
+*/
+
+.main-nav {
+  display: flex;
+  /* Convierte la navegación en un contenedor flex */
+
+  gap: 16px;
+  /* Separa los enlaces entre sí sin usar márgenes manuales */
 }
 
-/* =========================
-  3) Tipografía / Jerarquía
-   ========================= */
-h1 {
-  font-size: 32px;
-  margin: 0 0 8px 0;
+/* En .main-nav, los ítems flex son los enlaces <a> */
+
+.servicios h2 {
+  margin-bottom: 0.5em;
 }
 
-header h1 {
-  display: inline-block;
-  margin: 0;
-  vertical-align: middle;
+.servicio-lista {
+  display: flex;
+  /* Convierte la sección de servicios en contenedor flex */
+
+  gap: 20px;
+  /* Espacio entre cards */
+
+  flex-wrap: wrap;
+  /* Permite que las cards bajen de línea si no entran en una sola fila */
 }
 
-h2 {
-  font-size: 18px;
-  margin: 0 0 10px 0;
+/* En .servicios, los ítems flex son los .card */
+
+.card {
+  background-color: white;
+  /* Fondo blanco para que la card se destaque */
+
+  padding: 20px;
+  /* Espacio interno dentro de cada card */
+
+  border-radius: 12px;
+  /* Redondea las esquinas */
+
+  flex: 1 1 250px;
+  /* Propiedad abreviada de flex-grow, flex-shrink y flex-basis */
+  /* 1 = puede crecer */
+  /* 1 = puede achicarse */
+  /* 250px = tamaño base ideal */
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Le agrega una sombra suave a cada card para separarla visualmente del fondo.
+  0 = desplazamiento horizontal
+  4px = desplazamiento vertical
+  12px = difuminado
+  rgba(0, 0, 0, 0.08) = negro con baja opacidad */
+
+  overflow: hidden;
 }
 
-.titulo-seccion { font-size: 22px; }
+.hero h2 {
+  font-size: 2rem;
+  /* Hace más grande el título principal de la sección hero */
 
-section { margin-top: 24px; }
-
-/* =========================
-  4) Secciones especiales
-   ========================= */
-#destacado {
-  position: relative;
-  background-color: #f3f4f6;
-  border-top: 1px solid #d1d5db;
-  border-bottom: 1px solid #d1d5db;
-  text-align: center;
+  margin-bottom: 12px;
+  /* Separa el título del párrafo de abajo */
 }
 
-#servicios { position: relative; }
-
-/* =========================
-  5) Navegación (menú)
-   ========================= */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.hero p {
+  max-width: 60ch;
+  /* Limita el ancho del texto para que no quede demasiado largo al leer */
 }
 
-nav li {
-  display: inline-block;
-  margin-right: 12px;
+.card h3 {
+  margin-bottom: 10px;
+  /* Separa el título de la card de su párrafo */
 }
 
-nav a {
-  display: inline-block;
-  padding: 10px 14px;
-  border: 2px solid black;
-  text-decoration: none;
+#servicios, 
+#contacto, 
+#sobre-mi {
+    scroll-margin-top: 140px;
 }
 
-nav a:hover { background: #e5e7eb; }
-
-/* =========================
-  6) Botones / CTAs
-   ========================= */
-.btn-principal {
-  background-color: #7d8086;
-  color: #e7dfdf;
-  padding: 15px 19px;
-  border-color: #111827;
-}
-
-.btn-principal:hover {
-  background-color: #4b5563;
-  color: #ffffff;
-}
-
-.btn-principal:active { transform: translateY(1px); }
-
-.btn-destacado {
-  display: inline-block;
-  padding: 10px 14px;
-  border: 2px solid #111827;
-  text-decoration: none;
-}
-
-.btn-destacado:hover { background-color: #e5e7eb; }
-
-/* =========================
-  7) Badges
-   ========================= */
-/* Base (sirve tanto para header como para stickers) */
-.badge,
-.badge-new, .badge-offer{
-  display: inline-block;
-  background-color: #e5e7eb;
-  border: 1px solid #9ca3af;
-  padding: 6px 10px;
-  font-size: 12px;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-/* Badge al lado del título (solo layout extra) */
 header .badge {
-  vertical-align: middle;
-  margin-left: 12px;
-}
-
-/* Sticker “NUEVO” dentro de Servicios */
-#servicios .badge-new {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-
-#servicios .badge-offer{
-  position: absolute;
-  top: 48px;
-  right: 16px;
-  background-color: #f0a2a2;
-}
-
-/* =========================
-  8) Mensaje de error (demo)
-   ========================= */
-.mensaje-error {
-  margin-top: 8px;
-  padding: 8px 10px;
-  border: 2px solid #9ca3af;
-  background-color: #ffffff;
-}
-
-.mensaje-error.oculto { display: none; }
-
-/* =========================
-  9) Demos de inline-block
-   ========================= */
-.demo-inline { margin-top: 12px; }
-
-.pill {
-  display: inline-block;
-  vertical-align: middle;
-  border: 2px solid #111827;
-  padding: 8px 12px;
-  margin-right: 8px;
-}
-
-.pill-grande { padding: 18px 16px; }
-
-/* =========================
-  10) Botón fijo “Arriba”
-   ========================= */
-.btn-fixed {
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  padding: 10px 12px;
-  border: 2px solid #111827;
-  background: #ffffff;
-  text-decoration: none;
-  z-index: 1000;
-}
-
-.btn-fixed:hover { background: #e5e7eb; }
-
-.btn-fixed--discreto { opacity: 0.5; transform: scale(0.9); }
-.btn-fixed--visible  { opacity: 1;   transform: scale(1); }
-
-.tag-z{
-  position: absolute;
-  top: -14px;
-  right: 16px;
-
-  padding: 6px 10px;
-  border: 2px solid #111827;
-  background: #ffffff;
-  z-index: 2000; /* a propósito alto para probar */
-}
-
-/* Evita que el header sticky tape los anclajes (#servicios, etc.) */
-#destacado,
-#servicios,
-#contacto,
-#sobre-mi,
-#contenido {
-  scroll-margin-top: 140px; /* si tu header es más alto, subí este número */
-}
-
-.capas {
-  position: relative;   /* referencia para las capas */
-  height: 70px;         /* para que se vea el área */
-  margin-top: 12px;
-}
-
-.capa {
-  position: absolute;   /* se superponen */
-  top: 10px;
-  left: 10px;
-  padding: 10px 12px;
-  border: 2px solid #111827;
-  background: #ffffff;
-}
-
-.capa-a {
-  z-index: 1;
-  transform: translate(0px, 0px);
-}
-
-.capa-b {
-  z-index: 2; /* debería quedar arriba */
-  transform: translate(20px, 20px); /* la corre un poco para ver la superposición */
-}
-
-/* Tooltip en badge (header) */
-.badge--tooltip {
-  position: relative;
-  cursor: help;
+    transition: transform 120ms ease;
+    transform-origin: left center;
+    vertical-align: middle;
+    margin-left: 12px;
+    display: inline-block;
+    background-color: #e5e7eb;
+    border: 1px solid #9ca3af;
+    padding: 6px 10px;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 .badge--tooltip .tooltip {
-  position: absolute;
-  left: 50%;
-  top: calc(100% + 10px);
-  transform: translateX(-50%);
-
-  background: #111827;
-  color: #ffffff;
-  border: 2px solid #111827;
-  padding: 8px 10px;
-  font-size: 12px;
-  line-height: 1.2;
-  white-space: nowrap;
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  z-index: 2000;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
+    background: #111827;
+    color: #ffffff;
+    border: 2px solid #111827;
+    padding: 8px 10px;
+    font-size: 12px;
+    line-height: 1.2;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2000;
 }
 
-/* flechita */
+.badge--tooltip{
+    position: relative;
+    cursor: help;
+}
+
 .badge--tooltip .tooltip::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-bottom-color: #111827;
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-bottom-color: #111827;
 }
 
-/* aparece con mouse o teclado */
 .badge--tooltip:hover .tooltip,
 .badge--tooltip:focus-visible .tooltip {
   opacity: 1;
@@ -307,26 +221,7 @@ header .badge {
   outline-offset: 3px;
 }
 
-.btn-principal,
-.btn-destacado,
-.btn-fixed {
-  transition: transform 120ms ease, background-color 120ms ease;
-}
-
-.btn-principal:hover,
-.btn-destacado:hover {
-  transform: translateY(-2px);
-}
-
-.btn-fixed:hover {
+header .badge:hover,
+header .badge:focus-visible {
   transform: scale(1.05);
-}
-
-header .badge {
-  transition: transform 120ms ease;
-  transform-origin: left center;
-}
-
-header .badge:hover {
-  transform: scale(1.1);
 }
