@@ -10,10 +10,11 @@
     <header class="site-header">
         <h1 class="logo">Servicios</h1>
         <nav class="main-nav">
-            <a href="index.html">Inicio</a>
-            <a href="#inicio">Introducción</a>
-            <a href="#lista-servicio">Servicios</a>
-            <a href="#contacto">Contacto</a>
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="servicios.html" class="nav-link nav-link--active">Serivios</a>
+            <a href="#inicio" class="nav-link">Introducción</a>
+            <a href="#lista-servicio" class="nav-link">¿Que hago?</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
         </nav>
     </header>
     <main>
@@ -52,6 +53,8 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="ejemplo132@email.com..." required>
 
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Deja tu mensaje aquí..."></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </section>

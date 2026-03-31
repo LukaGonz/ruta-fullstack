@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Restoran</title>
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html">
+            <img src="img/Logo.png" alt="Logo del restoran" class="logo">
+        </a>
+        <nav class="main-nav">
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Menú</a>
+            <a href="#">Trabaja con nosotros</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="section sobre-nosotros" id="sobre-nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>En Raíz & Brasa, creemos que el fuego es el lenguaje más antiguo de la cocina. Nuestro proyecto nació de una idea simple: volver a lo esencial. Queríamos crear un espacio donde el humo, la leña y los productos de la tierra fueran los verdaderos protagonistas.
+
+            No somos solo un restaurante; somos un tributo a los productores locales y a la paciencia que requiere la buena mesa. Desde nuestros vegetales cosechados al amanecer hasta nuestros cortes ahumados por más de doce horas, cada plato en Raíz & Brasa cuenta una historia de respeto por la materia prima.
+
+            Nuestra cocina es abierta porque no tenemos secretos: solo fuego, sal y pasión. Te invitamos a sentarte, dejar el reloj de lado y reconectar con el sabor auténtico de la brasa.</p>
+        </section>
+
+        <section class="section horarios">
+            <h2>Horarios</h2>
+            <ul>
+                <li>Lunes</li>
+                <li>Martes</li>
+                <li>Miercoles</li>
+                <li>Jueves</li>
+                <li>Viernes</li>
+                <li>Sábado</li>
+                <li>Domingo</li>
+            </ul>
+            <ul>
+                <li>8am a 9pm</li>
+                <li>8am a 9pm</li>
+                <li>8am a 10pm</li>
+                <li>8am a 11pm</li>
+                <li>8am a 11pm</li>
+                <li>8am a 11pm</li>
+                <li>8am a 9pm</li>
+            </ul>
+        </section>
+
+        <section class="section menu" id="menu">
+            <article class="card">
+                <h3>Filete mignon con puré y espárragos</h3>
+                <img src="img/Filete mignon con puré y espárragos.png" alt="Filete mignon con puré y espárragos" class="Plato1">
+                <p>Sumérgete en la indulgencia con nuestro suculento filete miñón, cocinado a la perfección para obtener una textura tierna y un sabor ahumado. Servido sobre un lecho de puré de papas sedoso y acompañado de espárragos frescos salteados, este plato es una celebración de los sabores clásicos. Bañado en una reducción de vino tinto rica y aterciopelada, cada bocado te transportará a un estado de pura delicia gastronómica.</p>
+            </article>
+            <article class="card">
+                <h3>Plato gourmet con vieiras caramelizadas</h3>
+                <img src="img/Plato gourmet con vieiras caramelizadas.png" alt="vieiras caramelizadas" class="Plato2">
+                <p>Disfruta de la delicadeza del mar con nuestras vieiras perfectamente chamuscadas, que revelan un exterior dorado y un interior tierno y dulce. Presentadas sobre un puré de guisantes vibrante y refrescante, infundido con el aroma fresco de la menta, este plato es una explosión de sabor y color. Rociado con un aceite de menta casero para un toque final de frescura, cada vieira es un bocado de pura elegancia costera.</p>
+            </article>
+            <article class="card">
+                <h3>Salmón a la plancha con couscous</h3>
+                <img src="img/Salmón a la plancha con couscous.png" alt="Salmón a la plancha con couscous" class="Plato3">
+                <p>Déjate seducir por el sabor exótico de nuestro salmón glaseado con miso, que combina la dulzura caramelizada del miso con la frescura del pescado. Servido sobre un cuscús de verduras esponjoso y aromático, mezclado con tomates cherry asados y brócoli al vapor, este plato es una opción saludable y deliciosa. Terminado con un toque de cilantro fresco y sésamo tostado, cada bocado es una fusión de sabores asiáticos y mediterráneos que te dejará con ganas de más.</p>
+            </article>
+        </section>
+
+        <section class="section trabajo-nosotros" id="trabajo">
+            <form>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo..." required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo1234@email.com..." required>
+                
+                <label for="numero">Teléfono:</label>
+                <input type="tel" id="numero" name="numero" placeholder="Ej: 11 1234 5678" pattern="[0-9]{2,4}[0-9 {6,8}" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Deja tu mensaje aquí..."></textarea>
+
+                <button type="submit">Enviar:</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+
+    </footer>
+</body>
+</html>

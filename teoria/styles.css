@@ -1,11 +1,17 @@
 :root {
     --color-bg: #fcbedd;
     --color-header: #F863AD;
+    --color-header-border: #3a021f;
     --color-card: #FA8FC4;
     --color-text: #3a021f;
     --color-accent: #F40B80;
     --color-surface: #ffd7ea;
-
+    --color-link: #d94f9d;
+    --color-border-inputs: #fcbedd;
+    --color-focus: #BEDDFC;
+    --color-nav-text: #333333;
+    --color-nav-bg: #FCBEFC;
+    
     --radius-md: 12px;
     --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
 
@@ -56,7 +62,7 @@ img {
     align-items: center;
     justify-content: center;
     background-color: var(--color-header);
-    border: 2px solid #18011D;
+    border: 2px solid var(--color-header-border);
     border-radius: var(--radius-md);
 }
 
@@ -69,7 +75,7 @@ img {
     border: 1px solid black;
     border-radius: var(--radius-md);
     padding: 5px;
-    background-color: #FCBEFC;
+    background-color: var(--color-nav-bg);
 }
 
 .section {
@@ -98,6 +104,8 @@ img {
     padding: 1rem;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
 }
 
 .card h3 {
@@ -138,26 +146,43 @@ label {
     font-size: 1.25rem;
 }
 
-.formulario input {
+.formulario input, .formulario textarea {
     background-color: #ffe6f2;
     box-sizing: border-box;
     width: 100%;
     padding: 12px 14px;
-    border: 2px solid #ffe6f2;
+    border: 2px solid var(--color-border-inputs);
     border-radius: 1rem;
 }
 
 .formulario button {
     background-color: #ffe6f2;
-    border: 2px solid #fcbedd;
+    border: 2px solid var(--color-border-inputs);
     border-radius: .75rem;
     margin-top: .5rem;
     padding: .75rem 1rem;
     cursor:pointer;
 }
 
-.main-nav a:focus-visible, .formulario input:focus-visible, .formulario button:focus-visible{
-    outline: 2px solid #BEDDFC;
+.nav-link {
+    text-decoration: none;
+    color: var(--color-nav-text);
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-link--active {
+    color: var(--color-link);
+    font-weight: 700;
+    border-bottom: 2px solid currentColor;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.main-nav a:focus-visible, .formulario input:focus-visible, .formulario button:focus-visible, .formulario textarea:focus-visible{
+    outline: 2px solid var(--color-focus);
     outline-offset: 3px;
 }
 
@@ -191,7 +216,12 @@ label {
 
 @media (prefers-reduced-motion: reduce) {
     .card,
-    .main-nav a{
+    .main-nav a {
         transition: none;
+    }
+
+    .card:hover {
+        transform: none;
+        box-shadow: var(--shadow-sm);
     }
 }
